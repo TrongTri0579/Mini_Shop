@@ -52,11 +52,11 @@ module.exports = {
   //update an product
   async updateProduct(req, res) {
     try {
-      const updateEmployee = await ProductModel.patch(req.body);
-      if (updateEmployee) {
+      const updateProduct = await ProductModel.patch(req.body);
+      if (updateProduct) {
         return res
           .status(200)
-          .json({ updateEmployee, message: "Product updated succesfully!" });
+          .json({ updateProduct, message: "Product updated succesfully!" });
       }
       throw new Error("ID not found");
     } catch (error) {
